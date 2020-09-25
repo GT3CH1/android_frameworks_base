@@ -141,7 +141,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
     static public final String SYSTEM_DIALOG_REASON_DREAM = "dream";
 
     private static final String TAG = "GlobalActionsDialog";
-
     private static final boolean SHOW_SILENT_TOGGLE = false;
 
     private final Context mContext;
@@ -457,6 +456,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         if (!mIsRestartMenu) {
             mItems.add(new PowerAction());
             mItems.add(new RestartAction());
+            mItems.add(new ScreenrecordAction());
         }
 
         ArraySet<String> addedKeys = new ArraySet<String>();
@@ -520,6 +520,8 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
                 mItems.add(new RestartFastbootAction());
             } else if (GLOBAL_ACTION_KEY_SCREENSHOT.equals(actionKey)) {
                 mItems.add(new ScreenshotAction());
+            } else if (GLOBAL_ACTION_KEY_SCREENRECORD.equals(actionKey)){
+                mItems.add(new ScreenrecordAction());
             } else if (GLOBAL_ACTION_KEY_LOGOUT.equals(actionKey)) {
                 if (mDevicePolicyManager.isLogoutEnabled()
                         && getCurrentUser().id != UserHandle.USER_SYSTEM) {
@@ -875,14 +877,59 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
         @Override
         public boolean onLongPress() {
-            if (FeatureFlagUtils.isEnabled(mContext, FeatureFlagUtils.SCREENRECORD_LONG_PRESS)) {
-                mScreenRecordHelper.launchRecordPrompt();
-            } else {
-                mScreenshotHelper.takeScreenshot(2, true, true, mHandler, null);
-            }
+            mScreenRecordHelper.launchRecordPrompt();
             return true;
         }
     }
+    private class ScreenrecordAction extends SinglePressAction implements LongPressAction {
+       public ScreenrecordAction() {
+           super(com.android.systemui.R.drawable.ic_screenrecord,
+           com.android.systemui.R.string.global_action_screenrecord);
+       }
+       @Override
+       public void onPress() {
+           mScreenRecordHelper.launchRecordPrompt();
+       }
+
+       @Override
+       public boolean showDuringKeyguard() {
+           return true;
+       }
+       @Override
+       public boolean showBeforeProvisioning() {
+           return false;
+       }
+
+       @Override
+       public boolean onLongPress() {
+           return false;
+       }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private class BugReportAction extends SinglePressAction implements LongPressAction {
 
