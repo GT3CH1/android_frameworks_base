@@ -3165,6 +3165,28 @@ public final class Settings {
          */
         public static final int END_BUTTON_BEHAVIOR_HOME = 0x1;
 
+
+        /**
+         * Screenrecord: enable mic
+         * @hide
+         */
+        public static final String SCREENRECORD_ENABLE_MIC = "screenrecord_enable_mic";
+        /**
+         * Screenrecord: show taps
+         * @hide
+         */
+        public static final String SCREENRECORD_SHOW_TAPS = "screenrecord_show_taps";
+        /**
+         * Screenrecord: show stop dot
+         * @hide
+         */
+        public static final String SCREENRECORD_STOP_DOT = "screenrecord_stop_dot";
+        /**
+         * Screenrecord: low quality
+         * @hide
+         */
+        public static final String SCREENRECORD_LOW_QUALITY = "screenrecord_low_quality";
+
         /**
          * END_BUTTON_BEHAVIOR value for "go to sleep".
          * @hide
@@ -8059,7 +8081,11 @@ public final class Settings {
          * @hide
          */
         public static final String ASSIST_SCREENSHOT_ENABLED = "assist_screenshot_enabled";
-
+         /**
+         * Screenrecord: enable mic
+         * @hide
+         */
+        
         /**
          * Specifies whether the screen will show an animation if screen contents are sent to the
          * assist application (active voice interaction service).
