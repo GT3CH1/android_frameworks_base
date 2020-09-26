@@ -3187,6 +3187,13 @@ public final class Settings {
          */
         public static final String SCREENRECORD_LOW_QUALITY = "screenrecord_low_quality";
 
+         /**
+         * Whether the Screen record button should be shown in the power menu.
+         * @hide
+         */
+        public static final String SCREENRECORD_IN_POWER_MENU = "screenrecord_in_power_menu";
+
+
         /**
          * END_BUTTON_BEHAVIOR value for "go to sleep".
          * @hide

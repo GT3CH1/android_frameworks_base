@@ -334,7 +334,8 @@
 
     <style name="Theme.SystemUI.Dialog.Alert" parent="@*android:style/Theme.DeviceDefault.Light.Dialog.Alert" />
 
-    <style name="Theme.SystemUI.Dialog.GlobalActions" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
+    <style name="Theme.SystemUI.Dialog.GlobalActions" parent="Theme.AppCompat.DayNight">
+        <item name="android:windowLightStatusBar">@bool/is_theme_light</item>
         <item name="android:windowIsFloating">true</item>
     </style>
 

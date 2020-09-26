@@ -20,9 +20,9 @@
 
     <style name="Theme.SystemUI.Dialog.Alert" parent="@*android:style/Theme.DeviceDefault.Dialog.Alert" />
 
-    <style name="Theme.SystemUI.Dialog.GlobalActions" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
+<!--    <style name="Theme.SystemUI.Dialog.GlobalActions" parent="@android:style/Theme.DeviceDefault.NoActionBar.Fullscreen">
         <item name="android:windowIsFloating">true</item>
-    </style>
+    </style> -->
 
     <style name="TextAppearance.QS.Status" parent="TextAppearance.QS.TileLabel.Secondary">
         <item name="android:fontFamily">@*android:string/config_bodyFontFamily</item>
