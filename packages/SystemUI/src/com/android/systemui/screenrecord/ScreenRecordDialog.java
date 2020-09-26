@@ -96,6 +96,10 @@ public class ScreenRecordDialog extends Activity {
                 requestScreenCapture();
             }
         });
+        final Button cancelButton = findViewById(R.id.cancel_button);
+        cancelButton.setOnClickListener(v -> {
+            finish();
+        });
     }
     private void initialCheckSwitch(Switch sw, String setting) {
         sw.setChecked(
@@ -113,6 +117,7 @@ public class ScreenRecordDialog extends Activity {
     private void requestScreenCapture() {
         MediaProjectionManager mediaProjectionManager = (MediaProjectionManager) getSystemService(
                 Context.MEDIA_PROJECTION_SERVICE);
+        assert mediaProjectionManager != null;
         Intent permissionIntent = mediaProjectionManager.createScreenCaptureIntent();
         if (mLowQuality) {
             if (mUseAudio) {

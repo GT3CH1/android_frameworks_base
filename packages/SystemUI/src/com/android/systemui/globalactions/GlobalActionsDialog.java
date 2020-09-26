@@ -456,16 +456,19 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
         if (!mIsRestartMenu) {
             mItems.add(new PowerAction());
             mItems.add(new RestartAction());
-            mItems.add(new ScreenrecordAction());
+//            mItems.add(new ScreenrecordAction());
         }
 
         ArraySet<String> addedKeys = new ArraySet<String>();
         mHasLogoutButton = false;
         mHasLockdownButton = false;
+        System.out.println(addedKeys.toString());
         for (int i = 0; i < mCurrentMenuActions.length; i++) {
             String actionKey = mCurrentMenuActions[i];
+            Log.i(TAG,"Action key -> " + actionKey); 
             if (addedKeys.contains(actionKey)) {
                 // If we already have added this, don't add it again.
+                Log.i(TAG,"Already added " + actionKey);
                 continue;
             }
             if (GLOBAL_ACTION_KEY_POWER.equals(actionKey)) {
@@ -877,7 +880,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
 
         @Override
         public boolean onLongPress() {
-            mScreenRecordHelper.launchRecordPrompt();
             return true;
         }
     }
