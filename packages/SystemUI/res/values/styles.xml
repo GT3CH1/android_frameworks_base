@@ -335,7 +335,8 @@
     <style name="Theme.SystemUI.Dialog.Alert" parent="@*android:style/Theme.DeviceDefault.Light.Dialog.Alert" />
 
     <style name="Theme.SystemUI.Dialog.GlobalActions" parent="Theme.AppCompat.DayNight">
-        <item name="android:windowLightStatusBar">@bool/is_theme_light</item>
+        <!--<item name="android:windowLightStatusBar">@bool/is_theme_light</item> -->
+        <item name="android:windowBackground">@android:color/black</item>
         <item name="android:windowIsFloating">true</item>
     </style>
 
@@ -568,13 +569,16 @@
     </style>
 
     <!-- Screen recording -->
-    <style name="ScreenRecordStyle" parent="Theme.AppCompat.DayNight">
-        <item name="android:windowLightStatusBar">@bool/is_theme_light</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:colorBackgroundFloating">@*android:color/notification_material_background_color</item>
-        <item name="colorAccent">@*android:color/accent_device_default_light</item>
+    <style name="ScreenRecordStyle" parent="Theme.AppCompat.Dialog.MinWidth">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="android:textColorSecondary">#FF333333</item>
+        <item name="android:textColor">#FF64FFDA</item>
+        <item name="android:colorControlNormal">@android:color/black</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
-
     <!-- USB Contaminant dialog -->
     <style name ="USBContaminant" />
 

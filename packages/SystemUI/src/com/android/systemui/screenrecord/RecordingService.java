@@ -85,7 +85,7 @@ public class RecordingService extends Service {
     private static final int TOTAL_NUM_TRACKS = 1;
     private static final int VIDEO_BIT_RATE = 6000000;
     private static final int VIDEO_FRAME_RATE = 30;
-    private static final int AUDIO_BIT_RATE = 16;
+    private static final int AUDIO_BIT_RATE = 256000;
     private static final int AUDIO_SAMPLE_RATE = 44100;
     private static final int LOW_VIDEO_FRAME_RATE = 25;
     private static final int LOW_VIDEO_BIT_RATE = 1500000;
@@ -240,7 +240,7 @@ public class RecordingService extends Service {
             // Set up media recorder
             mMediaRecorder = new MediaRecorder();
             if (mUseAudio) {
-                mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+                mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.UNPROCESSED);
             }
             mMediaRecorder.setVideoSource(MediaRecorder.VideoSource.SURFACE);
             mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
