@@ -21,7 +21,7 @@
     <style name="Theme.SystemUI.Dialog.Alert" parent="@*android:style/Theme.DeviceDefault.Dialog.Alert" />
     <style name="ScreenRecordStyle" parent="Theme.AppCompat.DayNight.Dialog.MinWidth">
         <item name="android:windowBackground">@android:color/black</item>
-        <item name="android:textColor">#FF64FFDA</item>
+        <item name="android:textColor">@*android:color/accent_device_default_light</item>
         <item name="android:textColorPrimary">#FFFFFFFF</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">true</item>
