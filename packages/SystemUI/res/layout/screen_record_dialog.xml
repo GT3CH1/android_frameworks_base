@@ -87,7 +87,8 @@
                     android:id="@+id/switch_mic"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
-                    android:layout_gravity="top|end" />
+                    android:layout_gravity="top|end"
+                    android:theme="@style/ScreenRecordStyle" />
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/show_taps_layout"
@@ -119,7 +120,8 @@
                     android:id="@+id/switch_taps"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
-                    android:layout_gravity="top|end" />
+                    android:layout_gravity="top|end"
+                    android:theme="@style/ScreenRecordStyle" />
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/show_stop_dot_layout"
@@ -151,7 +153,8 @@
                     android:id="@+id/switch_stopdot"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
-                    android:layout_gravity="top|end" />
+                    android:layout_gravity="top|end"
+                    android:theme="@style/ScreenRecordStyle" />
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/low_quality_layout"
@@ -183,7 +186,8 @@
                     android:id="@+id/switch_low_quality"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
-                    android:layout_gravity="top|end" />
+                    android:layout_gravity="top|end"
+                    android:theme="@style/ScreenRecordStyle" />
             </FrameLayout>
             <RelativeLayout
                 android:layout_width="wrap_content"
