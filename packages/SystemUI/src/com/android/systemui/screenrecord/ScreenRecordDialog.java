@@ -61,7 +61,7 @@ public class ScreenRecordDialog extends Activity {
     private boolean mUseAudio;
     private boolean mShowTaps;
     private boolean mShowDot;
-    private boolean mLowQuality;
+    private boolean mLowQuality = false;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,23 +69,19 @@ public class ScreenRecordDialog extends Activity {
         final Switch micSwitch = findViewById(R.id.switch_mic);
         final Switch tapsSwitch = findViewById(R.id.switch_taps);
         final Switch dotSwitch = findViewById(R.id.switch_stopdot);
-        final Switch qualitySwitch = findViewById(R.id.switch_low_quality);
         
         initialCheckSwitch(micSwitch, SCREENRECORD_ENABLE_MIC);
         initialCheckSwitch(tapsSwitch, SCREENRECORD_SHOW_TAPS);
         initialCheckSwitch(dotSwitch, SCREENRECORD_STOP_DOT);
-        initialCheckSwitch(qualitySwitch, SCREENRECORD_LOW_QUALITY);
         
         setSwitchListener(micSwitch, SCREENRECORD_ENABLE_MIC);
         setSwitchListener(tapsSwitch, SCREENRECORD_SHOW_TAPS);
         setSwitchListener(dotSwitch, SCREENRECORD_STOP_DOT);
-        setSwitchListener(qualitySwitch, SCREENRECORD_LOW_QUALITY);
         final Button recordButton = findViewById(R.id.record_button);
         recordButton.setOnClickListener(v -> {
             mUseAudio = micSwitch.isChecked();
             mShowTaps = tapsSwitch.isChecked();
             mShowDot = dotSwitch.isChecked();
-            mLowQuality = qualitySwitch.isChecked();
             Log.d(TAG, "Record button clicked: audio " + mUseAudio + ", taps " + mShowTaps + ", dot " + mShowDot + ", quality " + mLowQuality);
             if (mUseAudio && checkSelfPermission(Manifest.permission.RECORD_AUDIO)
                     != PackageManager.PERMISSION_GRANTED) {

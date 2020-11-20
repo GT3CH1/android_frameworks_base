@@ -132,7 +132,7 @@
     <!-- Lineage clock -->
     <string name="clock_title_lineage" translatable="false">LineageOS</string>
 
-    <string name="screenrecord_dialog_title">Start recording with Screen Recorder?</string>
+    <string name="screenrecord_dialog_title">Screen Recorder</string>
     <string name="screenrecord_dialog_summary">Screen Recorder will have access to all of the information that\'s visible on your screen or played from your device while recording. This includes information such as photos, messages, and audio that you play.</string>
     <string name="screenrecord_dialog_settings">Settings</string>
     <string name="screenrecord_dialog_start">Start Recording</string>

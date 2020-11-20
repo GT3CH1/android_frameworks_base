@@ -87,6 +87,8 @@
     <!-- End padding for left-aligned status bar clock -->
     <dimen name="status_bar_left_clock_end_padding">7dp</dimen>
     <dimen name="screenrecord_dot_size">48dp</dimen>
+    <dimen name="screenrecord_dialog_padding">16dp</dimen>
+    <dimen name="screenrecord_logo_size">32dp</dimen>
     <!-- Spacing after the wifi signals that is present if there are any icons following it. -->
     <dimen name="status_bar_wifi_signal_spacer_width">2.5dp</dimen>
 

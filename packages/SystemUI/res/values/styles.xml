@@ -581,12 +581,11 @@
     <style name="ScreenRecordStyle" parent="Theme.AppCompat.Dialog.MinWidth">
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:textColorPrimary">@android:color/black</item>
-        <item name="android:textColorSecondary">#FF333333</item>
+        <!-- <item name="android:textColorSecondary">#333333</item> -->
         <item name="android:textColor">@*android:color/accent_device_default_light</item>
         <item name="android:colorPrimary">@*android:color/accent_device_default_light</item>
-        <item name="colorControlActivated">@*android:color/accent_device_default_light</item>
-        <item name="colorControlNormal">#FF333333</item>
-        <item name="colorSwitchThumbNormal">#FF333333</item>
+        <item name="android:colorControlActivated">@*android:color/accent_device_default_light</item>
+        <item name="android:colorForeground">#55000000</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
