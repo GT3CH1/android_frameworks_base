@@ -529,6 +529,13 @@ public class SubscriptionInfo implements Parcelable {
     public @Nullable ParcelUuid getGroupUuid() {
         return mGroupUUID;
     }
+    
+    /**
+    * @hide
+    */
+    public void clearGroupUuid(){
+        this.mGroupUUID = null;
+    }
 
     /**
      * @hide
