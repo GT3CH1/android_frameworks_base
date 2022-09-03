@@ -540,20 +540,6 @@ public class SubscriptionInfo implements Parcelable {
     /**
      * @hide
      */
-    public void clearGroupUuid() {
-        this.mGroupUUID = null;
-    }
-
-    /**
-     * @hide
-     */
-    public void clearGroupUuid() {
-        this.mGroupUUID = null;
-    }
-
-    /**
-     * @hide
-     */
     public List<String> getEhplmns() {
         return mEhplmns == null ? Collections.emptyList() : Arrays.asList(mEhplmns);
     }
@@ -576,6 +562,7 @@ public class SubscriptionInfo implements Parcelable {
 
     /**
      * @return the profile class of this subscription.
+     A
      * @hide
      */
     @SystemApi
